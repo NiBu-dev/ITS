@@ -65,7 +65,7 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
         // DO WHATEVER YOU WANT WITH GOOGLEMAP
 
 
-        mapSettings.setCompassEnabled(true);
+
 
         map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         // Add a marker in Sydney and move the camera
