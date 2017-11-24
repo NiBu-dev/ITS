@@ -3,4 +3,8 @@
     <string name="title_activity_map">Map</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_maps_gen">Map</string>
+    <string-array name="coords">
+        <item>47.4979, 19.0402</item>
+        <item>47.4990, 19.0420</item>
+    </string-array>
 </resources>

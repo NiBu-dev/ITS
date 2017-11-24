@@ -60,18 +60,30 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
 
     }
 
+    int counter = 0;
     @Override
     public void onMapReady(GoogleMap map) {
         // DO WHATEVER YOU WANT WITH GOOGLEMAP
+        final double[][] as = new double[][]{{47.482584, 19.067673},{47.476812, 19.055528}, {47.484295, 19.052267},{47.487689, 19.059476} };
+        LatLng bud1 = new LatLng(47.4950, 19.0320);
+        while (counter < 4) {
+
+            if (counter < 4) {
+                LatLng bud = new LatLng(as[counter][0], as[counter][1]);
+                map.addMarker(new MarkerOptions().position(bud).title("Marker kilometer 0"));
+            }
+            counter++;
+        }
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(bud1, 13.0f));
 
 
-
-
-        map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        // Add a marker in Sydney and move the camera
-        LatLng bud = new LatLng(47.4979, 19.0402);
-        map.addMarker(new MarkerOptions().position(bud).title("Marker in Sydney"));
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(bud, 13.0f));
+//        map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+//        // Add a marker in Sydney and move the camera
+//        LatLng bud = new LatLng(47.4979, 19.0402);
+//        LatLng bud1 = new LatLng(47.4981, 19.0410);
+//        map.addMarker(new MarkerOptions().position(bud).title("Marker kilometer 0"));
+//        map.addMarker(new MarkerOptions().position(bud1).title("Marker kilometer 12"));
+//        map.moveCamera(CameraUpdateFactory.newLatLngZoom(bud, 13.0f));
     }
 
 
